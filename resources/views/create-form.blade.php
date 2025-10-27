@@ -32,7 +32,7 @@
 <div class='flex items-center justify-center min-h-screen from-teal-100 via-teal-300 to-teal-500 bg-linear-to-br'>
 		<div class='w-full max-w-lg px-10 py-8 mx-auto bg-white rounded-lg shadow-xl'>
 			<div class='max-w-md mx-auto space-y-6'>
-                <!-- 4.1 created a form and method POST and set the (route('store') -->
+                <!-- 4.1 created a form and method POST and set the (route('store-item') -->
 
                 <!-- 4.9 another problem is when we upload correct image type it will also show the error message so we use in the form enctype="multipart/form-data" -->
 				<form action="{{route('store-item')}}" method="POST" enctype="multipart/form-data">
@@ -42,7 +42,7 @@
 					<hr class="my-6">
 
 
-                    
+
 					<label class="uppercase text-sm font-bold opacity-70">Name</label>
                     <!-- 4.8 to retain the old data in the input field during submit we use value="{{old('name')}}" -->
 					<input type="text" name="name" value="{{old('name')}}" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded border-2 border-slate-200 focus:border-slate-600 focus:outline-none">

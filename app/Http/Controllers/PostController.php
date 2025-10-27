@@ -26,15 +26,15 @@ class PostController extends Controller
 
         // 4.5 saving data to the db
 
-        $post = new Post;
+        $post = new Post;//here post is imported from Models
 
         $post -> name = $request -> name;
         $post -> description = $request -> description;
         // $post -> image = $request -> image;
 
 
-        // 5. uploaded image will be stored in the storage/app/public folder and also in db same name image should not be uploaded in db
-        $imageName = time().'.'.$request -> image -> extension();
+        // 5. uploaded image will be stored in the storage/app/public folder and also in db same name image should not be uploaded in db. (video timestamp 1:06:00)
+        $imageName = time().'.'.$request -> image -> extension();//change the image name according to time.
         $request -> image -> move(public_path('images'), $imageName);
 
         $post-> $imageName;
