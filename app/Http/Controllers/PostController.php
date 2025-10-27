@@ -30,7 +30,14 @@ class PostController extends Controller
 
         $post -> name = $request -> name;
         $post -> description = $request -> description;
-        $post -> image = $request -> image;
+        // $post -> image = $request -> image;
+
+
+        // 5. uploaded image will be stored in the storage/app/public folder and also in db same name image should not be uploaded in db
+        $imageName = time().'.'.$request -> image -> extension();
+        $request -> image -> move(public_path('images'), $imageName);
+
+        $post-> $imageName;
 
         $post -> save();
 

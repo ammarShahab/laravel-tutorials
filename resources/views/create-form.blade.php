@@ -41,6 +41,8 @@
 					<h2 class="text-2xl font-bold ">Submit your Data</h2>
 					<hr class="my-6">
 
+
+                    
 					<label class="uppercase text-sm font-bold opacity-70">Name</label>
                     <!-- 4.8 to retain the old data in the input field during submit we use value="{{old('name')}}" -->
 					<input type="text" name="name" value="{{old('name')}}" class="p-3 mt-2 mb-4 w-full bg-slate-200 rounded border-2 border-slate-200 focus:border-slate-600 focus:outline-none">
