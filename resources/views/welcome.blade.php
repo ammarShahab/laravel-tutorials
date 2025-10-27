@@ -19,13 +19,19 @@
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] min-h-screen ">
         <div class="flex justify-between items-center px-10 py-4">
-            <h2 class="text-2xl font-bold">Hello Laravel</h2>
+            <h2 class="text-2xl font-bold">Hello Laravel Home</h2>
             <div>
                 <a href="/create-item" class="bg-[#1b1b18] text-[#FDFDFC] px-4 py-2 rounded">
                     Create New Item
                 </a>
             </div>
-
         </div>
+        <!-- 4.6  show the success message conditionally where u want to show the message -->
+         @if(session('success'))
+            <div class="bg-green-500 w-1/4 text-white px-4 py-2 rounded ml-8">
+                {{ session('success')}}
+            </div>
+        @endif
+        
     </body>
 </html>
